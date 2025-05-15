@@ -13,9 +13,3 @@ Speak to Rakel Gunthe at The Frozen Hearth in Winterhold to purchase the deed.
 ## Credits
 
 + Oaristys and Tony67 - [Modders Resource Pack](https://www.nexusmods.com/skyrim/mods/16525)
-
-## License
-
-Horker Tusk Homestead is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License.
-
-+ [LICENSE](https://gitlab.com/aao-fyi/horker-tusk-homestead/-/blob/main/LICENSE)

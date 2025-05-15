@@ -13,9 +13,3 @@ This skeever free shack, located just north of Riften, is a perfect survival hom
 ## Credits
 
 + Oaristys and Tony67 - [Modders Resource Pack](https://www.nexusmods.com/skyrim/mods/16525)
-
-## License
-
-Skeever Tail Shack is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License.
-
-+ [LICENSE](https://gitlab.com/aao-fyi/skeever-tail-shack/-/blob/main/LICENSE)
