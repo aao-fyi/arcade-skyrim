@@ -96,7 +96,9 @@ Bool Function ADESArrestDungeon(Actor akActor, Int akQuestMin = 0, Int akQuestMa
 	While akCounter < akQuestsCount
 		Quest akQuest = akQuests[akCounter]
 		GlobalVariable akCount = akCounts[akCounter]
-		Bool aaArrest
+		Bool aaArrest = false
+
+		ADESClean(akQuest, akCount, 1, akCountMax, true)
 
 		; Trust count (scary)
 		If akCount.GetValueInt() < akCountMax
@@ -113,6 +115,38 @@ Bool Function ADESArrestDungeon(Actor akActor, Int akQuestMin = 0, Int akQuestMa
 	EndWhile
 
 	; Fail
+	Return false
+EndFunction
+
+Bool Function ADESArrestChamber(Actor aaActor)
+	Quest[] aaQuests = ADESChamberQuestList()
+	GlobalVariable[] aaCounts = ADESChamberCountList()
+	Int aaQuestsCount = aaQuests.Length
+	Int aaCountMax = ADESChamberMaxCount.GetValueInt()
+	Int aaCounter = 0
+
+	While aaCounter < aaQuestsCount
+		Quest aaQuest = aaQuests[aaCounter]
+		GlobalVariable aaCount = aaCounts[aaCounter]
+		Bool aaArrest = false
+
+		ADESClean(aaQuest, aaCount, 1, aaCountMax, true)
+
+		; Trust count (still scary, more now)
+		If aaCount.GetValueInt() < aaCountMax
+			aaArrest = ADESArrest(aaActor, aaQuest, aaCount, aaCountMax, ADESDungeonOutfitList, 0, 1, true)
+		EndIf
+
+		If (aaArrest == true)
+			; Success
+			aaCounter = aaQuestsCount
+			Return true
+		EndIf
+
+		aaCounter += 1
+	EndWhile
+
+	;  Fail
 	Return false
 EndFunction
 
@@ -140,6 +174,14 @@ Bool Function ADESRelease(Actor aaActor)
 		aaAliasMin = 1
 		aaAliasMax = aaCountMax.GetValueInt() * 2
 		aaStopEmptyQuest = false
+	ElseIf (aaActor.HasKeyword(ADESChamberKeyword) == true)
+		; Actor in chamber
+		aaQuests = ADESChamberQuestList()
+		aaCounts = ADESChamberCountList()
+		aaCountMax = ADESChamberMaxCount
+		aaAliasMin = 1
+		aaAliasMax = aaCountMax.GetValueInt()
+		aaStopEmptyQuest = true
 	Else
 		; Fail
 		Return false
@@ -159,7 +201,7 @@ Bool Function ADESRelease(Actor aaActor)
 
 			; Unassign the actor
 			If (aaAliasTarget != None)
-				;Unassign
+				; Unassign
                     				aaAliasTarget.Clear()
 
 				; Modify

@@ -6,11 +6,13 @@ GlobalVariable Property ADESDebug Auto
 ; Global Variables
 GlobalVariable Property ADESArenaMaxCount Auto
 GlobalVariable Property ADESDungeonMaxCount Auto
+GlobalVariable Property ADESChamberMaxCount Auto
 GlobalVariable Property ADESArrestEssential Auto
 
 ; Keywords
 Keyword Property ADESArenaKeyword Auto
 Keyword Property ADESDungeonKeyword Auto
+Keyword Property ADESChamberKeyword Auto
 
 ; Form Lists
 FormList Property ADESArenaTeam01OutfitList Auto
@@ -40,14 +42,14 @@ Quest Property ADESArena0105Quest Auto
 ; Returns array of arena quests
 Quest[] Function ADESArenaQuestList()
 	; Create quest list
-	Quest[] akQuests = new Quest[4] ;(0-3)
+	Quest[] aaQuests = new Quest[4] ;(0-3)
 	; Define quest list
-	akQuests[0] = ADESArena0101Quest
-	akQuests[1] = ADESArena0102Quest
-	akQuests[2] = ADESArena0103Quest
-	akQuests[3] = ADESArena0104Quest
+	aaQuests[0] = ADESArena0101Quest
+	aaQuests[1] = ADESArena0102Quest
+	aaQuests[2] = ADESArena0103Quest
+	aaQuests[3] = ADESArena0104Quest
 	; Return quest list
-	Return akQuests
+	Return aaQuests
 EndFunction
 ; =================================
 
@@ -63,14 +65,14 @@ GlobalVariable Property ADESArena0105Count Auto
 ; Returns array of arena counts
 GlobalVariable[] Function ADESArenaCountList()
 	; Create count list
-	GlobalVariable[] akCounts = new GlobalVariable[4] ;(0-3)
+	GlobalVariable[] aaCounts = new GlobalVariable[4] ;(0-3)
 	; Define count list
-	akCounts[0] = ADESArena0101Count
-	akCounts[1] = ADESArena0102Count
-	akCounts[2] = ADESArena0103Count
-	akCounts[3] = ADESArena0104Count
+	aaCounts[0] = ADESArena0101Count
+	aaCounts[1] = ADESArena0102Count
+	aaCounts[2] = ADESArena0103Count
+	aaCounts[3] = ADESArena0104Count
 	; Return count list
-	Return akCounts
+	Return aaCounts
 EndFunction
 ; =================================
 
@@ -246,6 +248,50 @@ GlobalVariable[] Function ADESDungeonCountList()
 EndFunction
 ; =================================
 
+; Chamber Quests
+; =================================
+Quest Property ADESChamber0101Quest Auto
+Quest Property ADESChamber0102Quest Auto
+Quest Property ADESChamber0103Quest Auto
+Quest Property ADESChamber0104Quest Auto
+
+; Chamber Quest List
+; Returns array of chamber quests
+Quest[] Function ADESChamberQuestList()
+	; Create quest list
+	Quest[] aaQuests = new Quest[4] ;(0-3)
+	; Define quest list
+	aaQuests[0] = ADESChamber0101Quest
+	aaQuests[1] = ADESChamber0102Quest
+	aaQuests[2] = ADESChamber0103Quest
+	aaQuests[3] = ADESChamber0104Quest
+	; Return quest list
+	Return aaQuests
+EndFunction
+; =================================
+
+; Chamber Counts
+; =================================
+GlobalVariable Property ADESChamber0101Count Auto
+GlobalVariable Property ADESChamber0102Count Auto
+GlobalVariable Property ADESChamber0103Count Auto
+GlobalVariable Property ADESChamber0104Count Auto
+
+; Chamber Count List
+; Returns array of chamber counts
+GlobalVariable[] Function ADESChamberCountList()
+	; Create count list
+	GlobalVariable[] aaCounts = new GlobalVariable[4] ;(0-3)
+	; Define count list
+	aaCounts[0] = ADESChamber0101Count
+	aaCounts[1] = ADESChamber0102Count
+	aaCounts[2] = ADESChamber0103Count
+	aaCounts[3] = ADESChamber0104Count
+	; Return count list
+	Return aaCounts
+EndFunction
+; =================================
+
 ; ADES Actor Alias Assign
 ; Return true if assigned, false if not assigned
 ; =================================
@@ -386,6 +432,11 @@ Function ADESClean(Quest akQuest, GlobalVariable akCount, Int akMin, Int akMax, 
 	; Stop quest if empty
 	If (akAliasCounter == 0) && (akQuestStop == true)
 		akQuest.Stop()
+	EndIf
+
+	; Debug
+	If (ADESDebug.GetValueInt() == 1)
+		Debug.Notification("Clean count: " + akAliasCounter)
 	EndIf
 
 	; Update counter

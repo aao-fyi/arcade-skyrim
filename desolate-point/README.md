@@ -35,6 +35,10 @@ The arena has 4 teams that can have up to 6 members each. Each team will be equi
 
 The teams will start fighting when the gates are activated, the gates will remain open for a minute. Anyone assigned to the arena teams while a fight is already in progress will not fight until the gate is activated again. When a new group is activated by the gates, the previous fighting memebers of that team are switched to a free-for-all team.
 
+## Chamber
+
+Send prisoners to the chamber to make like Bob Ross with a paint brush. There are 4 chamber cells, each can hold 1 prisoner. The chamber is located just past cell block 5 and 6.
+
 ## Stability
 
 Prisoners are added to quest aliases, and minor actor-value modifications are made. Upon release, they are removed from the alias, and the actor-values are restored to their default values.
@@ -57,9 +61,7 @@ Staff operates on shifts. If a merchant is not able to trade, speak to them at a
 
 This mod is still in development, but is much more stable than its predecessors. More features will be added in future updates including the following.
 
-+ Warden's quarters.
 + Mine, with resource generation.
-+ Chamber of information gathering.
 + Chopping block.
 + Global counts, currently tracked but not displayed.
 

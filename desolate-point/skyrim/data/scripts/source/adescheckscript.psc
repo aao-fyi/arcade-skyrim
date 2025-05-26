@@ -12,6 +12,9 @@ Bool Property CheckDungeonBlock03 = false Auto
 Bool Property CheckDungeonBlock04 = false Auto
 Bool Property CheckDungeonBlock05 = false Auto
 Bool Property CheckDungeonBlock06 = false Auto
+
+; Chamber Checks
+Bool Property CheckChamber01 = false Auto
 ; =================================
 
 ; Arena
@@ -71,6 +74,16 @@ Quest Property ADESDungeon0133Quest Auto
 Quest Property ADESDungeon0134Quest Auto
 Quest Property ADESDungeon0135Quest Auto
 Quest Property ADESDungeon0136Quest Auto
+; =================================
+
+; Chamber
+; =================================
+GlobalVariable Property ADESChamberMaxCount Auto
+
+Quest Property ADESChamber0101Quest Auto
+Quest Property ADESChamber0102Quest Auto
+Quest Property ADESChamber0103Quest Auto
+Quest Property ADESChamber0104Quest Auto
 ; =================================
 
 ; Misc
@@ -207,5 +220,14 @@ Event OnCellAttach()
 		ADESDevCheck(ADESDungeon0134Quest, 1, aaCountMax, ADESDungeonOutfitList)
 		ADESDevCheck(ADESDungeon0135Quest, 1, aaCountMax, ADESDungeonOutfitList)
 		ADESDevCheck(ADESDungeon0136Quest, 1, aaCountMax, ADESDungeonOutfitList)
+	EndIf
+
+	; Chamber
+	If (CheckChamber01 == true)
+		aaCountMax = ADESChamberMaxCount.GetValueInt()
+		ADESDevCheck(ADESChamber0101Quest, 1, aaCountMax, ADESDungeonOutfitList)
+		ADESDevCheck(ADESChamber0102Quest, 1, aaCountMax, ADESDungeonOutfitList)
+		ADESDevCheck(ADESChamber0103Quest, 1, aaCountMax, ADESDungeonOutfitList)
+		ADESDevCheck(ADESChamber0104Quest, 1, aaCountMax, ADESDungeonOutfitList)
 	EndIf
 EndEvent

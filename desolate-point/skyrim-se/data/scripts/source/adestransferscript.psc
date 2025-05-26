@@ -4,6 +4,7 @@ Message Property ADESMessageCancel Auto
 Message Property ADESMessageTransferCategories Auto
 Message Property ADESMessageTransferArena Auto
 Message Property ADESMessageTransferDungeon Auto
+Message Property ADESMessageTransferSector Auto
 
 Event OnEffectFinish(Actor akTarget, Actor akCaster)
 	Int akMenu = 0
@@ -38,6 +39,14 @@ Event OnEffectFinish(Actor akTarget, Actor akCaster)
 			ADESArrestDungeon(akTarget, 24, 29)
 		ElseIf akMenu == 5 ; Cell Block 6
 			ADESArrestDungeon(akTarget, 30, 35)
+		Else ; Cancel
+			ADESMessageCancel.Show()
+		EndIf
+	ElseIf akMenu == 2 ; Sector
+		akMenu = ADESMessageTransferSector.Show()
+
+		If akMenu == 0 ; Chamber
+			ADESArrestChamber(akTarget)
 		Else ; Cancel
 			ADESMessageCancel.Show()
 		EndIf

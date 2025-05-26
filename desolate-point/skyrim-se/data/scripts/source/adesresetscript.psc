@@ -2,6 +2,7 @@ Scriptname adesresetscript extends adesspellscript
 
 Bool Property ADESResetArena = false Auto
 Bool Property ADESResetDungeon = false Auto
+Bool Property ADESResetChamber = false Auto
 
 Bool Function ADESReset(Quest[] aaQuests, GlobalVariable[] aaCounts, GlobalVariable aaCountMax)
 	Int aaQuestsCount = aaQuests.Length
@@ -36,5 +37,8 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 	EndIf
 	If (ADESResetDungeon == true)
 		ADESReset(ADESDungeonQuestList(), ADESDungeonCountList(), ADESDungeonMaxCount)
+	EndIf
+	If (ADESResetChamber == true)
+		ADESReset(ADESChamberQuestList(), ADESChamberCountList(), ADESChamberMaxCount)
 	EndIf
 EndEvent
