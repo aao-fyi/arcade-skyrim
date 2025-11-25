@@ -1,4 +1,4 @@
-# Skyrim Mods
+# Arcade - Skyrim
 
 ## Installation
 
@@ -10,4 +10,4 @@
 
 Distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) License.
 
-+ [LICENSE](https://codeberg.org/aao-fyi/mods-skyrim/src/branch/main/LICENSE)
++ [LICENSE](https://codeberg.org/aao-fyi/arcade-skyrim/src/branch/main/LICENSE)

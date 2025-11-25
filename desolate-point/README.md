@@ -45,7 +45,7 @@ Prisoners are added to quest aliases, and minor actor-value modifications are ma
 
 The only lasting impact on NPCs is in the arena. When an arena fight is started, non-essential NPCs are removed from their factions. This does not matter most times, as they will be dead by the end of it. Essential NPCs are not removed from any factions, to prevent game breaking, but this produces a bug where essential NPCs in the arena may fight their own team.
 
-The arena and dugneon can be reset at any time by speaking to a General.
+The arena, dungeon, and chamber can be reset at any time by speaking to a General.
 
 Only one exterior cell is modified (34,24). Nothing else from the base game is modified.
 

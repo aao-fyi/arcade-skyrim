@@ -23,3 +23,5 @@ Currently only available as an ESP file, the mod has too many records to fit wit
 [*] Launch Skyrim and click on 'Data Files', then make sure the mod is enabled. Enjoy!
 [/list]
 [/size]
+
+[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade.aao.fyi96.png[/img][/url][/center]
