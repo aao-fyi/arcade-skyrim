@@ -13,4 +13,4 @@ Modders resource. Two imperial fort interiors that were part of an abandoned pro
 [/list][/list]
 [/size]
 
-[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade.aao.fyi96.png[/img][/url][/center]
+[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade96.png[/img][/url][/center]

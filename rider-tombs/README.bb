@@ -24,4 +24,4 @@ Currently only available as an ESP file, the mod has too many records to fit wit
 [/list]
 [/size]
 
-[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade.aao.fyi96.png[/img][/url][/center]
+[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade96.png[/img][/url][/center]

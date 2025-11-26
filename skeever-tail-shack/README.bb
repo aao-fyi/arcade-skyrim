@@ -17,4 +17,4 @@ This skeever free shack, located just north of Riften, is a perfect survival hom
 [/list]
 [/size]
 
-[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade.aao.fyi96.png[/img][/url][/center]
+[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade96.png[/img][/url][/center]

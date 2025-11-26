@@ -17,4 +17,4 @@ Speak to Rakel Gunthe at The Frozen Hearth in Winterhold to purchase the deed.
 [/list]
 [/size]
 
-[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade.aao.fyi96.png[/img][/url][/center]
+[center][url=https://arcade.aao.fyi/][img]https://arcade.aao.fyi/img/logo/arcade96.png[/img][/url][/center]
